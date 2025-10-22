@@ -1,0 +1,62 @@
+public class Employee extends Person{
+	private int yearJoined;
+	private String jobRole;
+	protected String workSchedule;
+	private double salary;
+	
+	public Employee() {
+		this(0, "", 0, 0, "", "", 0.0);
+	}
+
+	public Employee(int employeeId, String name, long contact, int yearJoined, String jobRole, String workSchedule, double salary) {
+		super(employeeId, name, contact);
+		this.yearJoined = yearJoined;
+		this.jobRole = jobRole;
+		this.workSchedule = workSchedule;
+		this.salary = salary;
+	}
+	
+	public int getYearJoined() {
+		return yearJoined;
+	}
+	
+	public String getJobRole() {
+		return jobRole;
+	}
+	
+	public String getWorkSchedule() {
+		return workSchedule;
+	}
+	
+	public double getSalary() {
+		return salary;
+	}
+	
+	public void setYearJoined(int yearJoined) {
+		this.yearJoined = yearJoined;
+	}
+	
+	public void setJobRole(String jobRole) {
+		this.jobRole = jobRole;
+	}
+	
+	public void setWorkSchedule(String workSchedule) {
+		this.workSchedule = workSchedule;
+	}
+	
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public String toString() {
+		return super.toString() + "\n" + "Year Joined: " + yearJoined + "\n" + "Job Role: " + jobRole + "\n" + "Work Schedule: " + workSchedule + "\n" + "Salary: " + salary;
+	}
+
+	public boolean equals(Object obj) {
+		if(obj instanceof Employee) {
+			return super.equals(obj);
+		} else {
+			return false;
+		}
+	}
+}
